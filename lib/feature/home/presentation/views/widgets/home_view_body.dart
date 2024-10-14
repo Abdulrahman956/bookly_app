@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'books_list_view.dart';
 import 'custom_app_bar.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -10,7 +11,10 @@ class HomeViewBody extends StatelessWidget {
     return const SafeArea(
       child: Scaffold(
         body: Column(
-          children: [CustomAppBar()],
+          children: [
+            CustomAppBar(),
+            BooksListView(),
+          ],
         ),
       ),
     );
