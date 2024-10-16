@@ -10,8 +10,8 @@ class BooksListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * .28,
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      height: MediaQuery.of(context).size.height * .30,
+      padding: const EdgeInsets.only(left: 20),
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => const CustomBooksItem(),
