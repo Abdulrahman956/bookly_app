@@ -9,14 +9,13 @@ class BestSellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      shrinkWrap: true,
+    return ListView.builder(
+      padding: EdgeInsets.zero,
       physics: const NeverScrollableScrollPhysics(),
-      itemBuilder: (context, index) => const BestSellerItem(),
-      separatorBuilder: (context, index) => const SizedBox(
-        height: 10,
+      itemBuilder: (context, index) => const Padding(
+        padding: EdgeInsets.symmetric(vertical: 10),
+        child: BestSellerItem(),
       ),
-      itemCount: 10,
     );
   }
 }
