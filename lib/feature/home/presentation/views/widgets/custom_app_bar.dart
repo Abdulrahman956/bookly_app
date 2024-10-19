@@ -1,5 +1,7 @@
+import 'package:bookly_app/core/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/assets.dart';
 
@@ -21,7 +23,9 @@ class CustomAppBar extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(FontAwesomeIcons.magnifyingGlass),
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push(AppRoutes.kSearchView);
+            },
           )
         ],
       ),

@@ -1,10 +1,10 @@
 import 'package:bookly_app/core/utils/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
+import 'book_rating.dart';
 
 class BestSellerItem extends StatelessWidget {
   const BestSellerItem({
@@ -66,24 +66,7 @@ class BestSellerItem extends StatelessWidget {
                             style: AppStyles.priceStyle,
                           ),
                           Spacer(),
-                          Icon(
-                            FontAwesomeIcons.solidStar,
-                            color: Colors.yellow,
-                            size: 20,
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            '4.8',
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            r'(199)',
-                            style: AppStyles.titleAuthor,
-                          ),
+                          BookRating(),
                         ],
                       ),
                     ],
