@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'best_seller_item.dart';
+import '../../../../home/presentation/views/widgets/best_seller_item.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({
-    super.key,
-  });
+class ResultSearchListView extends StatelessWidget {
+  const ResultSearchListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,5 +15,6 @@ class BestSellerListView extends StatelessWidget {
         child: BooksLIstView(),
       ),
     );
+    ;
   }
 }
