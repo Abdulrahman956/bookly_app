@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../../../../home/presentation/views/widgets/best_seller_item.dart';
 import 'custom_text_feild.dart';
 import 'result_search_list_view.dart';
 
