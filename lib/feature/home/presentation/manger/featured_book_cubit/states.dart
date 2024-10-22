@@ -4,10 +4,10 @@ abstract class FeaturedStates {}
 
 class FeaturedInitial extends FeaturedStates {}
 
-class FeaturedSucsess extends FeaturedStates {
+class FeaturedSuccess extends FeaturedStates {
   final List<BookModel> bookModel;
 
-  FeaturedSucsess(this.bookModel);
+  FeaturedSuccess(this.bookModel);
 }
 
 class FeaturedLoading extends FeaturedStates {}
