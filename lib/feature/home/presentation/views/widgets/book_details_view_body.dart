@@ -19,7 +19,10 @@ class BookDetailsViewBody extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: width * .5 / 2,
           ),
-          child: const CustomBooksItem(),
+          child: CustomBooksItem(
+            imageUrl:
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzwgSvmi2xjA-0_-p_bRWF2wenBAyaW9_AQQ&s',
+          ),
         ),
         const SizedBox(
           height: 30,

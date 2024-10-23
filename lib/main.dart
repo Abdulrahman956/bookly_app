@@ -1,8 +1,6 @@
-import 'package:bookly_app/core/utils/api_service.dart';
 import 'package:bookly_app/feature/home/data/repo/home_repo_impl.dart';
 import 'package:bookly_app/feature/home/presentation/manger/featured_book_cubit/cubit.dart';
 import 'package:bookly_app/feature/home/presentation/manger/newest_book_cubit/cubit.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,7 +24,7 @@ class Bookly extends StatelessWidget {
         BlocProvider(
           create: (context) => FeaturedCubit(
             getIt.get<HomeServise>(),
-          ),
+          )..fetchFeaturedBooks(),
         ),
         BlocProvider(
           create: (context) => NewestCubit(
@@ -39,8 +37,9 @@ class Bookly extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: kPrimaryColor,
-          textTheme:
-              GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+          textTheme: GoogleFonts.montserratTextTheme(
+            ThemeData.dark().textTheme,
+          ),
         ),
       ),
     );

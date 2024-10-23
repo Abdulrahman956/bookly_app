@@ -12,13 +12,15 @@ class SemilerBooksLIstView extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20),
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const CustomBooksItem(),
+        itemBuilder: (context, index) => CustomBooksItem(
+          imageUrl:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzwgSvmi2xjA-0_-p_bRWF2wenBAyaW9_AQQ&s',
+        ),
         separatorBuilder: (context, index) => const SizedBox(
           width: 10,
         ),
         itemCount: 10,
       ),
     );
-    ;
   }
 }
