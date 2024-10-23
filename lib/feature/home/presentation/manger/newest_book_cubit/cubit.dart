@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../data/repo/home_repo.dart';
 
-class FeaturedCubit extends Cubit<NewestBookStates> {
-  FeaturedCubit(this.homeRepo) : super(NewestInitial());
+class NewestCubit extends Cubit<NewestBookStates> {
+  NewestCubit(this.homeRepo) : super(NewestInitial());
   final HomeRepo homeRepo;
   Future<void> fetchFeaturedBooks() async {
     emit(NewestLoading());
